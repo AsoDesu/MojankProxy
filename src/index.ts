@@ -3,6 +3,8 @@ import express from 'express'
 import { createProxyMiddleware } from 'http-proxy-middleware'
 const app = express()
 
+console.log(process.env.DOMAIN)
+
 function router() {
     let config: any = {}
     config[`msapi.${process.env.DOMAIN}`] = "https://api.minecraftservices.com";
